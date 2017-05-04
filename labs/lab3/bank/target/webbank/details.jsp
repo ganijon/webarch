@@ -10,9 +10,8 @@
 <p><a href="/list">Back</a></p>
 
 <h4>Account details</h4>
-<p>
-    Account number: ${account.accountnumber} <br>
-    Customer name: ${account.customer.name} <br>
+Account number: ${account.accountnumber} <br>
+Customer name: ${account.customer.name} <br>
 
 <p><b>Account entries</b></p>
 <c:choose>
@@ -29,7 +28,9 @@
                         <td width="200">From Account</td>
                         <td width="200">From Person</td>
                     </tr>
-                    <tr><td></td></tr>
+                    <tr>
+                        <td></td>
+                    </tr>
                 </b>
             </caption>
 
@@ -42,7 +43,7 @@
                     <td width="100">${entry.description}</td>
                     <td width="200">${entry.fromAccountNumber}</td>
                     <td width="200">${entry.fromPersonName}</td>
-                 </tr>
+                </tr>
             </c:forEach>
 
             </tbody>
@@ -56,8 +57,6 @@
         </font>
     </c:otherwise>
 </c:choose>
-
-
 
 
 </body>

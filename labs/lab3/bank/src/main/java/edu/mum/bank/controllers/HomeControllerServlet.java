@@ -36,13 +36,13 @@ public class HomeControllerServlet extends HttpServlet {
                 response.sendRedirect("/list");
                 break;
             case DETAILS:
-                response.sendRedirect("/details.jsp");
+                response.sendRedirect("/details");
                 break;
             case DEPOSIT:
-                response.sendRedirect("/deposit.jsp");
+                response.sendRedirect("/deposit");
                 break;
             case WITHDRAW:
-                response.sendRedirect("/withdraw.jsp");
+                response.sendRedirect("/withdraw");
                 break;
         }
     }
