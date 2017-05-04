@@ -11,7 +11,7 @@
 
 <h4>Withdawal successfully done</h4>
 <p>Account number: ${account.accountnumber}</p>
-<p>Withdrawal amount: $${withdrawAmount}</p>
+<p>Withdrawal amount: $${amount}</p>
 <p>Current balance:$${account.balance}</p>
 
 </body>

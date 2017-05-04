@@ -18,14 +18,14 @@ public class DetailsControllerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        RequestDispatcher rd = request.getRequestDispatcher("/details.jsp");
-
-        long accountNumber = Long.parseLong(request.getParameter("accountNumber"));
-
-        Account account = AppServices.INSTANCE.AccountService.getAccount(accountNumber);
-
-        request.setAttribute("account", account);
-        rd.forward(request, response);
+        if(null == request.getParameter("accountNumber")) {
+            request.getRequestDispatcher("/find-account.jsp").forward(request, response);
+        } else {
+            long accountNumber = Long.parseLong(request.getParameter("accountNumber"));
+            Account account = AppServices.INSTANCE.AccountService.getAccount(accountNumber);
+            request.setAttribute("account", account);
+            request.getRequestDispatcher("/details.jsp").forward(request, response);
+        }
 
     }
 

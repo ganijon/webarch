@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/withdraw")
-public class WithdrawControllerServlet extends HttpServlet {
+@WebServlet("/find")
+public class FindAccountControllerServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher rd = request.getRequestDispatcher("/withdraw.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/find-account.jsp");
         rd.forward(request, response);
     }
 
@@ -25,16 +25,12 @@ public class WithdrawControllerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         long accountNumber = Long.parseLong(request.getParameter("accountNumber"));
-        double amount = Double.parseDouble(request.getParameter("amount"));
 
-        AppServices.INSTANCE.AccountService.withdraw(accountNumber, amount);
         Account account = AppServices.INSTANCE.AccountService.getAccount(accountNumber);
 
         request.setAttribute("account", account);
-        request.setAttribute("amount", amount);
 
-        RequestDispatcher rd = request.getRequestDispatcher("/withdraw-success.jsp");
-        rd.forward(request, response);
+        request.getRequestDispatcher("/details").forward(request, response);
     }
 
 

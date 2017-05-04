@@ -44,6 +44,9 @@ public class HomeControllerServlet extends HttpServlet {
             case WITHDRAW:
                 response.sendRedirect("/withdraw");
                 break;
+            case TRANSFER:
+                response.sendRedirect("/transfer");
+                break;
         }
     }
 }

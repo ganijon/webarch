@@ -11,7 +11,7 @@
 
 <h4>Deposit successfully accepted</h4>
 <p>Account number: ${account.accountnumber}</p>
-<p>Deposit amount: $${depositAmount}</p>
+<p>Deposit amount: $${amount}</p>
 <p>Current balance:$${account.balance}</p>
 
 </body>

@@ -11,7 +11,7 @@
 
 <form action="/deposit" method="post">
     Account Number: <input type="text" name="accountNumber" pattern="[0-9.]+" /><br>
-    Deposit Amount: <input type="text" name="depositAmount" pattern="[0-9.]+"/><br>
+    Deposit Amount: <input type="text" name="amount" pattern="[0-9.]+"/><br>
     <br>
     <input type=submit value="Deposit">
 </form>

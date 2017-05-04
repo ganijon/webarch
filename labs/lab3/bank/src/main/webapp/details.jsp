@@ -7,7 +7,7 @@
     <title>Account Details</title>
 </head>
 <body>
-<p><a href="/list">Back</a></p>
+<p><a href="/home">Back</a></p>
 
 <h4>Account details</h4>
 Account number: ${account.accountnumber} <br>

@@ -11,7 +11,7 @@
 
 <form action="/withdraw" method="post">
     Account Number: <input type="text" name="accountNumber" pattern="[0-9.]+" /><br>
-    Withdraw Amount: <input type="text" name="withdrawAmount" pattern="[0-9.]+"/><br>
+    Withdraw Amount: <input type="text" name="amount" pattern="[0-9.]+"/><br>
     <br>
     <input type=submit value="Withdraw">
 </form>

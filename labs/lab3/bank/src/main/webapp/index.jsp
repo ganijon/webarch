@@ -12,9 +12,10 @@
            <optgroup label="Bank operations">
                <option value="create">Create an account</option>
                <option value="list">List all accounts</option>
-               <%--<option value="details">View account details</option>--%>
-               <option value="deposit">Deposit money</option>
-               <option value="withdraw">Withdraw money</option>
+               <option value="details">View account details</option>
+               <option value="deposit">Deposit funds</option>
+               <option value="withdraw">Withdraw funds</option>
+               <option value="transfer">Transfer funds</option>
            </optgroup>
        </select>
 

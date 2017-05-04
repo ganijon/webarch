@@ -10,9 +10,13 @@
 <p><a href="index.jsp">Back</a></p>
 
 <h4>Deposit successfully accepted</h4>
-<p>Account number: ${account.accountnumber}</p>
-<p>Deposit amount: $${depositAmount}</p>
-<p>Current balance:$${account.balance}</p>
 
+<p>Account number: ${accountFrom.accountnumber}</p>
+<p>Current balance:$${accountFrom.balance}</p>
+
+<p>Account number of Beneficiary: ${accountTo.accountnumber}</p>
+<p>Current balance:$${accountTo.balance}</p>
+
+<p>Transfer amount: $${amount}</p>
 </body>
 </html>

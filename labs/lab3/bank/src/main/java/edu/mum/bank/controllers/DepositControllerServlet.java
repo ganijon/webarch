@@ -25,13 +25,13 @@ public class DepositControllerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         long accountNumber = Long.parseLong(request.getParameter("accountNumber"));
-        double depositAmount = Double.parseDouble(request.getParameter("depositAmount"));
+        double amount = Double.parseDouble(request.getParameter("amount"));
 
-        AppServices.INSTANCE.AccountService.deposit(accountNumber, depositAmount);
+        AppServices.INSTANCE.AccountService.deposit(accountNumber, amount);
         Account account = AppServices.INSTANCE.AccountService.getAccount(accountNumber);
 
         request.setAttribute("account", account);
-        request.setAttribute("depositAmount", depositAmount);
+        request.setAttribute("amount", amount);
 
         RequestDispatcher rd = request.getRequestDispatcher("/deposit-success.jsp");
         rd.forward(request, response);
