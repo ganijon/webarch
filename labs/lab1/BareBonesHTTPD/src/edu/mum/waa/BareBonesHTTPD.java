@@ -7,12 +7,13 @@ import java.util.*;
 public class BareBonesHTTPD extends Thread {
 
 	private static final int PortNumber = 8080;
-	private static String DOC_ROOT= "C://docroot/";
-	
-	Socket connectedClient = null;
+
+	private ContentNegotiator contentNegotiator = null;
+	private Socket connectedClient = null;
 
 	public BareBonesHTTPD(Socket client) {
 		connectedClient = client;
+		contentNegotiator = new MainContentNegotiator();
 	}
 
 	public void run() {
@@ -52,8 +53,8 @@ public class BareBonesHTTPD extends Thread {
 
 		// Header Fields and Body
 		boolean readingBody = false;
-		ArrayList<String> fields = new ArrayList<>();
-		ArrayList<String> body = new ArrayList<>();
+		List<String> fields = new ArrayList<>();
+		List<String> body = new ArrayList<>();
 
 		while (fromClient.ready()) {
 
@@ -77,37 +78,29 @@ public class BareBonesHTTPD extends Thread {
 
 	private void processRequest(BBHttpRequest httpRequest, BBHttpResponse httpResponse) {
 
-		StringBuilder response = new StringBuilder();
-		
-		try {
-			File file = new File(DOC_ROOT + httpRequest.getUri());
-			Scanner scanner = new Scanner(file);
-			scanner.useDelimiter("\\Z");		
-			response.append(scanner.next());
-			
-			scanner.close();
-			
-			httpResponse.setStatusCode(200);
-			httpResponse.setContentType("text/html; charset=UTF-8");
-			
-		} catch (FileNotFoundException e) {
-			
-			response.append(e.getMessage());
-			httpResponse.setStatusCode(404);
-		}
-
-		httpResponse.setMessage(response.toString());
+		contentNegotiator.negotiate(httpRequest, httpResponse);
 	}
 
 	private void sendResponse(BBHttpResponse response) throws IOException {
 
 		String statusLine = null;
-		if (response.getStatusCode() == 200) {
-			statusLine = "HTTP/1.1 200 OK" + "\r\n";
-		} else if (response.getStatusCode() == 404) {
-			statusLine = "HTTP/1.1 404 Not Found" + "\r\n";
-		} else {
-			statusLine = "HTTP/1.1 501 Not Implemented" + "\r\n";
+
+		switch (response.getStatusCode()) {
+			case 200:
+				statusLine = "HTTP/1.1 200 OK" + "\r\n";
+				break;
+			case 400:
+				statusLine = "HTTP/1.1 400 Bad Request" + "\r\n";
+				break;
+			case 404:
+				statusLine = "HTTP/1.1 404 Not Found" + "\r\n";
+				break;
+			case 500:
+				statusLine = "HTTP/1.1 500 Internal server error" + "\r\n";
+				break;
+			case 501:
+				statusLine = "HTTP/1.1 501 Not Implemented" + "\r\n";
+				break;
 		}
 
 		String serverdetails = "Server: BareBones HTTPServer";

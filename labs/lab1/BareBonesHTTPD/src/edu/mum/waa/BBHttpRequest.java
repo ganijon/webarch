@@ -1,13 +1,13 @@
 package edu.mum.waa;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class BBHttpRequest {
 	private String method;
 	private String uri;
 	private String httpVersion;
-	private ArrayList<String> fields;
-	private ArrayList<String> message;
+	private List<String> fields;
+	private List<String> message;
 	
 	public String getMethod() {
 		return method;
@@ -27,16 +27,16 @@ public class BBHttpRequest {
 	public void setHttpVersion(String version) {
 		this.httpVersion = version;
 	}
-	public ArrayList<String> getFields() {
+	public List<String> getFields() {
 		return fields;
 	}
-	public void setFields(ArrayList<String> fields) {
+	public void setFields(List<String> fields) {
 		this.fields = fields;
 	}
-	public ArrayList<String> getMessage() {
+	public List<String> getMessage() {
 		return message;
 	}
-	public void setMessage(ArrayList<String> messge) {
+	public void setMessage(List<String> messge) {
 		this.message = messge;
 	}
 	public String getStartLine(){
