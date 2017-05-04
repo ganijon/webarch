@@ -7,10 +7,11 @@
 <body>
 <p><a href="index.jsp">Back</a></p>
 
+<h4>Create an account</h4>
+
 <form action="/create" method="post">
-    <p>Create an account</p>
-    Account Number: <input type="text" name="accNo" pattern="[0-9.]+" /><br>
-    Customer Name : <input type="text" name="cusNm" /><br>
+    Account Number: <input type="text" name="accountNumber" pattern="[0-9.]+" /><br>
+    Customer Name : <input type="text" name="customerName" /><br>
     <br>
     <input type=submit value="Create">
 </form>

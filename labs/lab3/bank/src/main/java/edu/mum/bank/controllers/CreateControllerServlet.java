@@ -16,23 +16,30 @@ public class CreateControllerServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher rd = request.getRequestDispatcher("/create.jsp");
+        rd.forward(request, response);
+    }
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-        try {
-            int accountNumber = Integer.parseInt(request.getParameter("accNo"));
-            String customerName = request.getParameter("cusNm");
+        long accountNumber = Long.parseLong(request.getParameter("accountNumber"));
+        String customerName = request.getParameter("customerName");
 
-            Account newAccount = AppServices.INSTANCE.AccountService.createAccount(accountNumber, customerName);
+        Account newAccount = AppServices.INSTANCE.AccountService.createAccount(accountNumber, customerName);
 
+        String address;
+        if (newAccount == null) {
+            request.setAttribute("badId", accountNumber);
+            address = "/create-error.jsp";
+        } else {
             request.setAttribute("account", newAccount);
-
-            RequestDispatcher view = request.getRequestDispatcher("/details.jsp");
-            view.forward(request, response);
-
-        } catch (Exception ex) {
-            response.sendRedirect("/error.jsp");
+            address = "/create-success.jsp";
         }
 
+        RequestDispatcher rd = request.getRequestDispatcher(address);
+        rd.forward(request, response);
     }
 
 
