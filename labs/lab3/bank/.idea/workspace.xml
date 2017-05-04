@@ -2,64 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9089efcd-058d-4d42-9a71-6569f420658f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/exercise5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/bank_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/list.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/bank_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/src/edu/mum/waa/MainContentNegotiator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_api_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/src/edu/mum/waa/FileContentNegotiator.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/src/edu/mum/waa/ContentNegotiator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/error.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/bank_war.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/src/edu/mum/waa/FileContentNegotiator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/src/edu/mum/waa/MainContentNegotiator.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_4.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/src/edu/mum/waa/WelcomeContentNegotiator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/exercise5_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_api_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/error.jsp" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/src/edu/mum/waa/ContactsContentNegotiator.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/java/edu/mum/bank/controllers/HomeControllerServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/classes/edu/mum/bank/AppServices.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/classes/edu/mum/bank/controllers/DetailsControllerServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/classes/edu/mum/bank/controllers/HomeControllerServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/lib/exercise5_3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/libraries/javax_servlet_javax_servlet_api_3_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/AppServices.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/bank.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/details.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/java/edu/mum/bank/AppServices.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/create.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/bin/edu/mum/waa/BBHttpRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/controllers/HomeControllerServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/Operation.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/bank_war_exploded.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/artifacts/webbank_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/artifacts/webbank_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/webapp/create.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/libraries/javax_servlet_javax_servlet_api_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/controllers/HomeControllerServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/create.jsp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/kotlinc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/classes/edu/mum/bank/controllers/CreateControllerServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/java/edu/mum/bank/controllers/DetailsControllerServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/controllers/DetailsControllerServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/controllers/CreateControllerServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/libraries/exercise5_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/webapp/details.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/java/edu/mum/bank/controllers/CreateControllerServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/java/edu/mum/bank/Operation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/classes/edu/mum/bank/controllers/HomeControllerServlet$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/bin/edu/mum/waa/BBHttpResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/controllers/HomeControllerServlet$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/bin/edu/mum/waa/BareBonesHTTPD.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/bank.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/webapp/details.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/java/edu/mum/bank/AppServices.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/classes/edu/mum/bank/Operation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/bin/edu/mum/waa/BBHttpResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/artifacts/webbank_war.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/controllers/CreateControllerServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/classes/edu/mum/bank/controllers/DetailsControllerServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/details.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/java/edu/mum/bank/controllers/CreateControllerServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/AppServices.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/webapp/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/libraries/exercise5_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/Operation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/classes/edu/mum/bank/AppServices.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/controllers/HomeControllerServlet$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/lib/exercise5_3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/webapp/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/classes/edu/mum/bank/controllers/HomeControllerServlet$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/java/edu/mum/bank/controllers/HomeControllerServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/classes/edu/mum/bank/controllers/HomeControllerServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/bin/edu/mum/waa/BBHttpRequest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/.idea/artifacts/webbank_war_exploded.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/bin/edu/mum/waa/BareBonesHTTPD.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/webapp/create.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/webbank/WEB-INF/classes/edu/mum/bank/controllers/CreateControllerServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/target/classes/edu/mum/bank/controllers/DetailsControllerServlet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webbank/src/main/java/edu/mum/bank/controllers/DetailsControllerServlet.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/src/edu/mum/waa/BBHttpRequest.java" afterPath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/src/edu/mum/waa/BBHttpRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/src/edu/mum/waa/BareBonesHTTPD.java" afterPath="$PROJECT_DIR$/../../lab1/BareBonesHTTPD/src/edu/mum/waa/BareBonesHTTPD.java" />
     </list>
@@ -77,9 +77,11 @@
       <file leaf-file-name="HomeControllerServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/bank/controllers/HomeControllerServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
+            <state relative-caret-position="629">
               <caret line="47" column="48" lean-forward="false" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,7 +89,7 @@
       <file leaf-file-name="TransferControllerServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/bank/controllers/TransferControllerServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
+            <state relative-caret-position="214">
               <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
               <folding />
             </state>
@@ -117,7 +119,7 @@
       <file leaf-file-name="DetailsControllerServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/bank/controllers/DetailsControllerServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="272">
               <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -130,7 +132,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/bank/controllers/FindAccountControllerServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,7 +151,7 @@
       <file leaf-file-name="details.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/details.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="153">
               <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
@@ -228,10 +230,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="48" />
-    <option name="y" value="-11" />
-    <option name="width" value="1319" />
-    <option name="height" value="780" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -251,6 +253,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,8 +262,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -270,86 +273,21 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bank" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -409,6 +347,26 @@
       <method />
     </configuration>
     <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -545,12 +503,6 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
-      <method />
-    </configuration>
     <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
       <module name="" />
       <setting name="path" value="" />
@@ -628,12 +580,6 @@
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat" />
     </list>
-    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-    </configuration>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -660,39 +606,40 @@
       <option name="presentableId" value="Default" />
       <updated>1493883863845</updated>
       <workItem from="1493883882502" duration="2962000" />
+      <workItem from="1493938746296" duration="63000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10238000" />
+    <option name="totallyTimeSpent" value="10301000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="-11" width="1319" height="780" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23922734" sideWeight="0.49706313" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33385828" sideWeight="0.50293684" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39970282" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29384965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2796486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36849925" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23922734" sideWeight="0.49706313" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -714,9 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -732,9 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,9 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="93" lean-forward="false" selection-start-line="18" selection-start-column="93" selection-end-line="18" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -921,12 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="method#getBalance#0;class#Account#0" expanded="false" />
-            <element signature="method#deposit#0;class#Account#0" expanded="false" />
-            <element signature="method#withdraw#0;class#Account#0" expanded="false" />
-            <element signature="method#transferFunds#0;class#Account#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -934,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,7 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="27" column="71" lean-forward="false" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -990,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,9 +949,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/bank/controllers/HomeControllerServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
+        <state relative-caret-position="629">
           <caret line="47" column="48" lean-forward="false" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,7 +967,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/bank/controllers/DetailsControllerServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="272">
           <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1047,14 +978,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/bank/controllers/FindAccountControllerServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/details.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="153">
           <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
         </state>
@@ -1070,11 +1001,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/mum/bank/controllers/TransferControllerServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="214">
           <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>bank:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>bank</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>exercise5_3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
