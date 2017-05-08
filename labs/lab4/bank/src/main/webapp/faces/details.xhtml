@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <h1>Account details</h1>
+
+    <h:panelGrid columns="2">
+        <h:outputLabel>Account Number:</h:outputLabel>
+        <h:inputText value="#{account.accountNumber}" required="true"/>
+
+        <h:outputLabel>Customer Name</h:outputLabel>
+        <h:inputText value="#{account.customer.name}"/>
+    </h:panelGrid>
+
+    <h:form>
+        <h:dataTable value="#{account.entryList}" var="entry"
+                     styleClass="acountTable"
+                     headerClass="acountTableHeader"
+                     rowClasses="acountTableOddRow,acountTableEvenRow">
+
+            <h:column>
+                <f:facet name="header">Transaction Date</f:facet>
+                #{entry.date}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Amount</f:facet>
+                #{entry.amount}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Description</f:facet>
+                #{entry.description}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">From Account</f:facet>
+                #{entry.fromAccountNumber}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">From Person</f:facet>
+                #{entry.fromPersonName}
+            </h:column>
+
+        </h:dataTable>
+    </h:form>
+</f:view>
+
+</html>

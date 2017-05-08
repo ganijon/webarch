@@ -25,20 +25,27 @@
             <version>2.2.14</version>
         </dependency>
 
-       <!-- &lt;!&ndash; https://mvnrepository.com/artifact/javax.servlet/jstl &ndash;&gt;
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
         </dependency>
 
+        <!-- &lt;!&ndash; https://mvnrepository.com/artifact/javax.servlet/jstl &ndash;&gt;
+         <dependency>
+             <groupId>javax.servlet</groupId>
+             <artifactId>jstl</artifactId>
+             <version>1.2</version>
+         </dependency>
 
-        &lt;!&ndash; https://mvnrepository.com/artifact/javax.el/el-api &ndash;&gt;
-        <dependency>
-            <groupId>javax.el</groupId>
-            <artifactId>el-api</artifactId>
-            <version>2.2</version>
-        </dependency>-->
+
+         &lt;!&ndash; https://mvnrepository.com/artifact/javax.el/el-api &ndash;&gt;
+         <dependency>
+             <groupId>javax.el</groupId>
+             <artifactId>el-api</artifactId>
+             <version>2.2</version>
+         </dependency>-->
 
     </dependencies>
     <build>
