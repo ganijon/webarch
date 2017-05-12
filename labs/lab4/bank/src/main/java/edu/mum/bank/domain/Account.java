@@ -2,7 +2,8 @@ package edu.mum.bank.domain;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.util.*;
 
 @ManagedBean
@@ -13,6 +14,8 @@ public class Account {
     @ManagedProperty(value="#{customer}")
     private Customer customer;
 
+    @Max(1000)
+    @Min(100)
     long accountnumber;
 
 

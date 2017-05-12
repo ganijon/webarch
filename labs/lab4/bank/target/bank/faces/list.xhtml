@@ -11,9 +11,12 @@
         <h1>List all accounts</h1>
 
         <h:dataTable value="#{accountController.list}" var="account"
-                     styleClass="acountTable"
-                     headerClass="acountTableHeader"
-                     rowClasses="acountTableOddRow,acountTableEvenRow">
+                     styleClass="tableStyle"
+                     captionClass = "captionClass"
+                     headerClass="headerStyle"
+                     footerClass="footerStyle"
+                     rowClasses="oddRowStyle, evenRowStyle"
+                     border="1" >
 
             <h:column>
                 <f:facet name="header">Account No.</f:facet>

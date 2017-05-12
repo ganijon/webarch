@@ -1,10 +1,16 @@
 package edu.mum.bank.domain;
 
+import javax.validation.constraints.*;
 import java.util.Date;
 
 public class AccountEntry {
+
+	@Past(message = "Transaction date must be in the past")
 	private Date date;
+
 	private double amount;
+
+	@Size(max = 100, message = "Description length must be less than 100")
 	private String description;
 	private String fromAccountNumber;
 	private String fromPersonName;
@@ -12,7 +18,11 @@ public class AccountEntry {
 	public AccountEntry() {
 	}
 
-	public AccountEntry(Date date, double amount, String description, String fromAccountNumber, String fromPersonName) {
+	public AccountEntry(@NotNull Date date,
+						@Min(0) double amount,
+						@NotNull String description,
+						@NotNull String fromAccountNumber,
+						@NotNull String fromPersonName) {
 		super();
 		this.date = date;
 		this.amount = amount;

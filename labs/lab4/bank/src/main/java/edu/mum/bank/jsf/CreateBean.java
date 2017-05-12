@@ -4,18 +4,20 @@ import edu.mum.bank.domain.Account;
 import edu.mum.bank.service.AccountService;
 import edu.mum.bank.service.IAccountService;
 
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
 import java.util.Collection;
 import java.util.Map;
 
-@ManagedBean(name = "accountController", eager = true)
-public class AccountController {
+@ManagedBean( eager = true)
+@ViewScoped
+public class CreateBean {
 
-    private static IAccountService accountService = new AccountService();
+    @ManagedProperty(value = "#{accountService}")
+    private AccountService accountService;
+    public void setAccountService(AccountService accountService) {
+        accountService = accountService;
+    }
 
     @ManagedProperty(value = "#{account}")
     private Account account;
@@ -37,21 +39,7 @@ public class AccountController {
 
 
     public String showDetails() {
-
-        Map<String, String> params = FacesContext
-                .getCurrentInstance()
-                .getExternalContext()
-                .getRequestParameterMap();
-
-        long accNo = Long.parseLong(params.get("accountNumber"));
-
-        Account account = accountService.getAccount(accNo);
-        if (account != null) {
-            setAccount(account);
-            return "details";
-        }
-        else
-            return "fail";
+        return "details";
     }
 
     public Account getAccount() {

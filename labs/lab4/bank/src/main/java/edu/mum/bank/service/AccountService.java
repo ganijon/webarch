@@ -15,7 +15,7 @@ import edu.mum.bank.logging.Logger;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
-@ManagedBean(eager=true)
+@ManagedBean(name = "accountService")
 @ApplicationScoped
 public class AccountService implements IAccountService {
 	private IAccountDAO accountDAO;

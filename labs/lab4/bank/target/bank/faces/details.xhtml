@@ -10,17 +10,20 @@
 
     <h:panelGrid columns="2">
         <h:outputLabel>Account Number:</h:outputLabel>
-        <h:inputText value="#{account.accountNumber}" required="true"/>
+        <h:outputLabel value="#{detailsBean.account.accountNumber}" />
 
         <h:outputLabel>Customer Name</h:outputLabel>
-        <h:inputText value="#{account.customer.name}"/>
+        <h:outputLabel value="#{detailsBean.account.customer.name}"/>
     </h:panelGrid>
-    
+
     <h:form>
-        <h:dataTable value="#{account.entryList}" var="entry"
-                     styleClass="acountTable"
-                     headerClass="acountTableHeader"
-                     rowClasses="acountTableOddRow,acountTableEvenRow">
+        <h:dataTable value="#{detailsBean.account.entryList}" var="entry"
+                     styleClass="tableStyle"
+                     captionClass = "captionClass"
+                     headerClass="headerStyle"
+                     footerClass="footerStyle"
+                     rowClasses="oddRowStyle, evenRowStyle"
+                     border="1" >
 
             <h:column>
                 <f:facet name="header">Transaction Date</f:facet>
