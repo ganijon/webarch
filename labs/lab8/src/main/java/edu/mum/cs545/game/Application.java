@@ -1,4 +1,4 @@
-package edu.mum.cs545.springboot;
+package edu.mum.cs545.game;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
