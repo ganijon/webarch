@@ -1,5 +1,6 @@
 package edu.mum.cs545.game.bootstrap;
 
+import edu.mum.cs545.game.domain.Match;
 import edu.mum.cs545.game.domain.Stadium;
 import edu.mum.cs545.game.domain.Team;
 import edu.mum.cs545.game.repositories.IStadiumRepository;
@@ -75,6 +76,8 @@ public class DataLoader implements ApplicationListener<ContextRefreshedEvent> {
         wembley.setCity("London");
         wembley.setState("United Kingdom");
         wembley.setImageUrl("http://cdn.ltstatic.com/2008/June/AK409833_393high.jpg");
+        wembley.getMatches().add(new Match());
+        wembley.getMatches().add(new Match());
         stadiumRepository.save(wembley);
 
         log.info("Saved Wembley Stadium - id:" + wembley.getId());

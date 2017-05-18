@@ -2,11 +2,11 @@ package edu.mum.cs545.game.domain;
 
 import javax.persistence.*;
 
-//@Entity
+@Entity
 public class Player {
 
-    //@Id
-    //@GeneratedValue
+    @Id
+    @GeneratedValue
     private int id;
     private String name;
     private byte shirtNumber;

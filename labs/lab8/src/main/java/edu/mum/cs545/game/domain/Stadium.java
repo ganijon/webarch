@@ -1,28 +1,30 @@
 package edu.mum.cs545.game.domain;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Stadium {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
 
     private String name;
     private String city;
     private String state;
     private String imageUrl;
 
-    //@OneToMany
-    //private List<Match> matches;
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Match> matches = new HashSet<>();
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -54,11 +56,11 @@ public class Stadium {
 
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
-//    public List<Match> getMatches() {
-//        return matches;
-//    }
-//
-//    public void setMatches(List<Match> matches) {
-//        this.matches = matches;
-//    }
+
+    public Set<Match> getMatches() { return matches; }
+
+    public void setMatches(Set<Match> matches) {
+        this.matches = matches;
+    }
+
 }

@@ -9,7 +9,7 @@ public class Team {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
 
     private String name;
     private String city;
@@ -26,11 +26,11 @@ public class Team {
     //@OneToMany
     //private List<Match> matchesAsVisitor;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -58,14 +58,6 @@ public class Team {
         this.mascot = mascot;
     }
 
-//    public List<Player> getPlayers() {
-//        return players;
-//    }
-//
-//    public void setPlayers(List<Player> players) {
-//        this.players = players;
-//    }
-
     public String getHomeUniform() {
         return homeUniform;
     }
@@ -82,20 +74,5 @@ public class Team {
         this.awayUniform = awayUniform;
     }
 
-//    public List<Match> getMatchesAsHome() {
-//        return matchesAsHome;
-//    }
-//
-//    public void setMatchesAsHome(List<Match> matchesAsHome) {
-//        this.matchesAsHome = matchesAsHome;
-//    }
-//
-//    public List<Match> getMatchesAsVisitor() {
-//        return matchesAsVisitor;
-//    }
-//
-//    public void setMatchesAsVisitor(List<Match> matchesAsVisitor) {
-//        this.matchesAsVisitor = matchesAsVisitor;
-//    }
 
 }

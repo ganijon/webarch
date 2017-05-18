@@ -4,26 +4,28 @@ package edu.mum.cs545.game.domain;
 import javax.persistence.*;
 import java.util.Date;
 
-//@Entity
+@Entity
 public class Match {
 
-    //@Id
-    //@GeneratedValue
-    private long id;
+    @Id
+    @GeneratedValue
+    private Long id;
 
     private Date date;
     private Date startTime;
     private int homeScore;
     private int visitorScore;
-    private Team visitorTeam;
-    private Team homeTeam;
+   // private Team visitorTeam;
+   // private Team homeTeam;
+
+    @ManyToOne(fetch = FetchType.EAGER)
     private Stadium stadium;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -58,7 +60,7 @@ public class Match {
     public void setVisitorScore(int visitorScore) {
         this.visitorScore = visitorScore;
     }
-
+/*
     public Team getVisitorTeam() {
         return visitorTeam;
     }
@@ -73,7 +75,7 @@ public class Match {
 
     public void setHomeTeam(Team homeTeam) {
         this.homeTeam = homeTeam;
-    }
+    }*/
 
     public Stadium getStadium() {
         return stadium;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Boot Web App</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(players)}">
+        <h2>Player List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Player Name</th>
+                <th>Shirt Number</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr th:each="player : ${players}">
+                <td th:text="${player.id}"><a href="/player/${player.id}">Id</a></td>
+                <td th:text="${player.name}">Player Name</td>
+                <td th:text="${player.shirtNumber}">Shirt Number</td>
+
+                <td><a th:href="${ '/player/' + player.id}">View</a></td>
+                <td><a th:href="${'/player/edit/' + player.id}">Edit</a></td>
+                <td><a th:href="${'/player/delete/' + player.id}">Delete</a></td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <div>
+        <a href="#" th:href="@{/player/new}">Create a Player</a>
+    </div>
+</div>
+
+</body>
+</html>
