@@ -6,43 +6,46 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/stadium")
 public class StadiumController {
 
     @Autowired
     IStadiumService service;
 
-    @RequestMapping("/")
+    @RequestMapping("stadium/")
     String list(Model model){
         model.addAttribute("stadiums", service.listAll());
-        return "/stadium/list";
+        return "stadium/list";
     }
 
-    @RequestMapping("/{id}")
+    @RequestMapping("stadium/{id}")
     String show(@PathVariable Integer id, Model model){
         model.addAttribute(service.getById(id));
         return "stadium/show";
     }
 
-    @RequestMapping(value = "product", method = RequestMethod.POST)
-    public String save(Stadium stadium){
+    @RequestMapping("stadium/new")
+    public String newStadium(Model model){
+        model.addAttribute("stadium", new Stadium());
+        return "stadium/edit";
+    }
+
+    @RequestMapping("stadium/edit/{id}")
+    public String edit(@PathVariable Integer id, Model model){
+        model.addAttribute("stadium", service.getById(id));
+        return "stadium/edit";
+    }
+
+    @RequestMapping(value = "stadium/", method = RequestMethod.POST)
+    public String saveStadium(Stadium stadium){
         service.save(stadium);
         return "redirect:/stadium/" + stadium.getId();
     }
 
-    @RequestMapping("/edit/{id}")
-    public String edit(@PathVariable Integer id, Model model){
-        model.addAttribute("product", service.getById(id));
-        return "stadium/edit";
-    }
-
-    @RequestMapping("/delete/{id}")
+    @RequestMapping("stadium/delete/{id}")
     public String delete(@PathVariable Integer id){
         service.delete(id);
         return "redirect:/stadium/list";

@@ -13,6 +13,7 @@ public class Stadium {
     private String name;
     private String city;
     private String state;
+    private String imageUrl;
 
     //@OneToMany
     //private List<Match> matches;
@@ -48,6 +49,10 @@ public class Stadium {
     public void setState(String state) {
         this.state = state;
     }
+
+    public String getImageUrl() { return imageUrl; }
+
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
 //    public List<Match> getMatches() {
 //        return matches;
