@@ -48,6 +48,6 @@ public class StadiumController {
     @RequestMapping("stadium/delete/{id}")
     public String delete(@PathVariable Integer id){
         service.delete(id);
-        return "redirect:/stadium/list";
+        return "redirect:/stadium/";
     }
 }

@@ -19,19 +19,24 @@
                 <th>State</th>
                 <th>View</th>
                 <th>Edit</th>
+                <th>Delete</th>
             </tr>
             <tr th:each="stadium : ${stadiums}">
-                <td th:text="${stadium.id}"><a href="/product/${product.id}">Id</a></td>
+                <td th:text="${stadium.id}"><a href="/stadium/${stadium.id}">Id</a></td>
                 <td th:text="${stadium.name}">Product Id</td>
                 <td th:text="${stadium.city}">descirption</td>
                 <td th:text="${stadium.state}">price</td>
                 <td><a th:href="${ '/stadium/' + stadium.id}">View</a></td>
                 <td><a th:href="${'/stadium/edit/' + stadium.id}">Edit</a></td>
+                <td><a th:href="${'/stadium/delete/' + stadium.id}">Delete</a></td>
             </tr>
         </table>
 
     </div>
-</div>
 
+    <div>
+        <a href="#" th:href="@{/stadium/new}">Create a Stadium</a>
+    </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Boot Web App</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Team Details</h2>
+    <div>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Team Id:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${team.id}">Team Id</p></div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Team Name:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${team.name}">Team name</p></div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">City:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${team.city}">City</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Mascot:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${team.mascot}">State</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Home Uniform:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${team.homeUniform}">State</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Away Uniform:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${team.awayUniform}">State</p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

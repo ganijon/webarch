@@ -4,27 +4,27 @@ package edu.mum.cs545.game.domain;
 import javax.persistence.*;
 import java.util.List;
 
-//@Entity
+@Entity
 public class Team {
 
-    //@Id
-    //@GeneratedValue
+    @Id
+    @GeneratedValue
     private int id;
 
     private String name;
     private String city;
     private String mascot;
     private String homeUniform;
-    private String visitUniform;
+    private String awayUniform;
 
     //@OneToMany
-    private List<Player> players;
+    //private List<Player> players;
 
     //@OneToMany
-    private List<Match> matchesAsHome;
+    //private List<Match> matchesAsHome;
 
     //@OneToMany
-    private List<Match> matchesAsVisitor;
+    //private List<Match> matchesAsVisitor;
 
     public int getId() {
         return id;
@@ -58,13 +58,13 @@ public class Team {
         this.mascot = mascot;
     }
 
-    public List<Player> getPlayers() {
-        return players;
-    }
-
-    public void setPlayers(List<Player> players) {
-        this.players = players;
-    }
+//    public List<Player> getPlayers() {
+//        return players;
+//    }
+//
+//    public void setPlayers(List<Player> players) {
+//        this.players = players;
+//    }
 
     public String getHomeUniform() {
         return homeUniform;
@@ -74,28 +74,28 @@ public class Team {
         this.homeUniform = homeUniform;
     }
 
-    public String getVisitUniform() {
-        return visitUniform;
+    public String getAwayUniform() {
+        return awayUniform;
     }
 
-    public void setVisitUniform(String visitUniform) {
-        this.visitUniform = visitUniform;
+    public void setAwayUniform(String awayUniform) {
+        this.awayUniform = awayUniform;
     }
 
-    public List<Match> getMatchesAsHome() {
-        return matchesAsHome;
-    }
-
-    public void setMatchesAsHome(List<Match> matchesAsHome) {
-        this.matchesAsHome = matchesAsHome;
-    }
-
-    public List<Match> getMatchesAsVisitor() {
-        return matchesAsVisitor;
-    }
-
-    public void setMatchesAsVisitor(List<Match> matchesAsVisitor) {
-        this.matchesAsVisitor = matchesAsVisitor;
-    }
+//    public List<Match> getMatchesAsHome() {
+//        return matchesAsHome;
+//    }
+//
+//    public void setMatchesAsHome(List<Match> matchesAsHome) {
+//        this.matchesAsHome = matchesAsHome;
+//    }
+//
+//    public List<Match> getMatchesAsVisitor() {
+//        return matchesAsVisitor;
+//    }
+//
+//    public void setMatchesAsVisitor(List<Match> matchesAsVisitor) {
+//        this.matchesAsVisitor = matchesAsVisitor;
+//    }
 
 }

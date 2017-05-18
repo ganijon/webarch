@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Boot Web App</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(teams)}">
+        <h2>Team List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Team Name</th>
+                <th>City</th>
+                <th>Mascot</th>
+                <th>Home Uniform</th>
+                <th>Away Uniform</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr th:each="team : ${teams}">
+                <td th:text="${team.id}"><a href="/team/${team.id}">Id</a></td>
+                <td th:text="${team.name}">Team Name</td>
+                <td th:text="${team.city}">City</td>
+                <td th:text="${team.mascot}">Mascot</td>
+                <td th:text="${team.homeUniform}">Home Uniform</td>
+                <td th:text="${team.awayUniform}">Away Uniform</td>
+                <td><a th:href="${ '/team/' + team.id}">View</a></td>
+                <td><a th:href="${'/team/edit/' + team.id}">Edit</a></td>
+                <td><a th:href="${'/team/delete/' + team.id}">Delete</a></td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <div>
+        <a href="#" th:href="@{/team/new}">Create a Team</a>
+    </div>
+</div>
+
+</body>
+</html>
