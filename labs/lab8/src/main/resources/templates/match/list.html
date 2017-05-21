@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Boot Web App</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(matches)}">
+        <h2>Team List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Date-Time</th>
+                <th>Stadium</th>
+                <th>Home Score</th>
+                <th>Visitor Score</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr th:each="match : ${matches}">
+                <td th:text="${match.id}"><a href="/match/${match.id}">Id</a></td>
+                <td th:text="${match.dateTime}">Date-Time</td>
+                <td th:text="${match.stadium.name}"><a href="/stadium/${match.stadium.id}">Stadium</a></td>
+                <td th:text="${match.homeScore}">Home Score</td>
+                <td th:text="${match.visitorScore}">Visitor Score</td>
+                <td><a th:href="${'/match/' + match.id}">View</a></td>
+                <td><a th:href="${'/match/edit/' + match.id}">Edit</a></td>
+                <td><a th:href="${'/match/delete/' + match.id}">Delete</a></td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <div>
+        <a href="#" th:href="@{/team/new}">Create a Team</a>
+    </div>
+</div>
+
+</body>
+</html>

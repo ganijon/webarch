@@ -7,13 +7,16 @@ public class Player {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
     private String name;
-    private byte shirtNumber;
+    private int shirtNumber;
 
-    public int getId() { return id; }
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Team team;
 
-    public void setId(int id) { this.id = id; }
+    public Long getId() { return id; }
+
+    public void setId(Long id) { this.id = id; }
 
     public String getName() {
         return name;
@@ -23,12 +26,20 @@ public class Player {
         this.name = name;
     }
 
-    public byte getShirtNumber() {
+    public int getShirtNumber() {
         return shirtNumber;
     }
 
-    public void setShirtNumber(byte shirtNumber) {
+    public void setShirtNumber(int shirtNumber) {
         this.shirtNumber = shirtNumber;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
     }
 
 }

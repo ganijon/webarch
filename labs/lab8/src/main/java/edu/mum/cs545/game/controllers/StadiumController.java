@@ -21,7 +21,7 @@ public class StadiumController {
     }
 
     @RequestMapping("stadium/{id}")
-    String show(@PathVariable Integer id, Model model){
+    String show(@PathVariable Long id, Model model){
         model.addAttribute(service.getById(id));
         return "stadium/show";
     }
@@ -33,7 +33,7 @@ public class StadiumController {
     }
 
     @RequestMapping("stadium/edit/{id}")
-    public String edit(@PathVariable Integer id, Model model){
+    public String edit(@PathVariable Long id, Model model){
         model.addAttribute("stadium", service.getById(id));
         return "stadium/edit";
     }
@@ -45,7 +45,7 @@ public class StadiumController {
     }
 
     @RequestMapping("stadium/delete/{id}")
-    public String delete(@PathVariable Integer id){
+    public String delete(@PathVariable Long id){
         service.delete(id);
         return "redirect:/stadium/";
     }

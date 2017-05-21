@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@EnableAutoConfiguration
 public class PlayerController {
 
     @Autowired
@@ -24,7 +23,7 @@ public class PlayerController {
     }
 
     @RequestMapping("player/{id}")
-    String show(@PathVariable Integer id, Model model){
+    String show(@PathVariable Long id, Model model){
         model.addAttribute(service.getById(id));
         return "player/show";
     }
@@ -36,7 +35,7 @@ public class PlayerController {
     }
 
     @RequestMapping("player/edit/{id}")
-    public String edit(@PathVariable Integer id, Model model){
+    public String edit(@PathVariable Long id, Model model){
         model.addAttribute("player", service.getById(id));
         return "player/edit";
     }
@@ -48,7 +47,7 @@ public class PlayerController {
     }
 
     @RequestMapping("player/delete/{id}")
-    public String delete(@PathVariable Integer id){
+    public String delete(@PathVariable Long id){
         service.delete(id);
         return "redirect:/player/";
     }

@@ -1,24 +1,29 @@
 package edu.mum.cs545.game.domain;
 
-
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-public class Match {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "MATCH_TYPE")
+public abstract class Match implements Serializable {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    private Date date;
-    private Date startTime;
+    private Date dateTime;
     private int homeScore;
     private int visitorScore;
-   // private Team visitorTeam;
-   // private Team homeTeam;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+    private Team visitorTeam;
+
+    @ManyToOne(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+    private Team homeTeam;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
     private Stadium stadium;
 
     public Long getId() {
@@ -29,20 +34,12 @@ public class Match {
         this.id = id;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getDateTime() {
+        return dateTime;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public Date getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(Date startTime) {
-        this.startTime = startTime;
+    public void setDateTime(Date dateTime) {
+        this.dateTime = dateTime;
     }
 
     public int getHomeScore() {
@@ -60,7 +57,7 @@ public class Match {
     public void setVisitorScore(int visitorScore) {
         this.visitorScore = visitorScore;
     }
-/*
+
     public Team getVisitorTeam() {
         return visitorTeam;
     }
@@ -75,7 +72,7 @@ public class Match {
 
     public void setHomeTeam(Team homeTeam) {
         this.homeTeam = homeTeam;
-    }*/
+    }
 
     public Stadium getStadium() {
         return stadium;

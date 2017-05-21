@@ -12,7 +12,7 @@ public class TeamService implements ITeamService {
     private ITeamRepository repository;
 
     @Override
-    public Team getById(int id) { return repository.findOne(id); }
+    public Team getById(Long id) { return repository.findOne(id); }
 
     @Override
     public Iterable<Team> listAll() {
@@ -25,7 +25,7 @@ public class TeamService implements ITeamService {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Long id) {
         repository.delete(id);
     }
 }

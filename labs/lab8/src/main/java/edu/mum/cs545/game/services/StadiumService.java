@@ -12,7 +12,7 @@ public class StadiumService implements IStadiumService {
     private IStadiumRepository repository;
 
     @Override
-    public Stadium getById(int id) {
+    public Stadium getById(Long id) {
         return repository.findOne(id);
     }
 
@@ -27,7 +27,7 @@ public class StadiumService implements IStadiumService {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Long id) {
         repository.delete(id);
     }
 }

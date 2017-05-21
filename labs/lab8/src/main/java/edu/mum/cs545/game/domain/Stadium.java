@@ -56,7 +56,6 @@ public class Stadium {
 
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
-
     public Set<Match> getMatches() { return matches; }
 
     public void setMatches(Set<Match> matches) {

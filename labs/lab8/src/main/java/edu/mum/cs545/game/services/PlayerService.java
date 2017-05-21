@@ -12,7 +12,7 @@ public class PlayerService implements IPlayerService {
     private IPlayerRepository repository;
 
     @Override
-    public Player getById(int id) { return repository.findOne(id); }
+    public Player getById(Long id) { return repository.findOne(id); }
 
     @Override
     public Iterable<Player> listAll() {
@@ -25,7 +25,7 @@ public class PlayerService implements IPlayerService {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Long id) {
         repository.delete(id);
     }
 }

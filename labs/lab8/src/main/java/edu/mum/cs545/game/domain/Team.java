@@ -2,7 +2,8 @@ package edu.mum.cs545.game.domain;
 
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Team {
@@ -17,14 +18,14 @@ public class Team {
     private String homeUniform;
     private String awayUniform;
 
-    //@OneToMany
-    //private List<Player> players;
+    @OneToMany(cascade = {CascadeType.ALL})
+    private Set<Player> players = new HashSet<>();
 
-    //@OneToMany
-    //private List<Match> matchesAsHome;
+    @OneToMany(cascade = {CascadeType.ALL})
+    private Set<Match> matchesAsHome = new HashSet<>();
 
-    //@OneToMany
-    //private List<Match> matchesAsVisitor;
+    @OneToMany(cascade = {CascadeType.ALL})
+    private Set<Match> matchesAsVisitor = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -74,5 +75,28 @@ public class Team {
         this.awayUniform = awayUniform;
     }
 
+    public Set<Player> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(Set<Player> players) {
+        this.players = players;
+    }
+
+    public Set<Match> getMatchesAsHome() {
+        return matchesAsHome;
+    }
+
+    public void setMatchesAsHome(Set<Match> matchesAsHome) {
+        this.matchesAsHome = matchesAsHome;
+    }
+
+    public Set<Match> getMatchesAsVisitor() {
+        return matchesAsVisitor;
+    }
+
+    public void setMatchesAsVisitor(Set<Match> matchesAsVisitor) {
+        this.matchesAsVisitor = matchesAsVisitor;
+    }
 
 }
