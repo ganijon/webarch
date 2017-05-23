@@ -1,0 +1,26 @@
+<b:beans xmlns="http://www.springframework.org/schema/security"
+         xmlns:b="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/security
+ http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+    <http>
+        <intercept-url pattern="/login" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/login-error" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/css/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/index" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/team/**" access="ROLE_USER" />
+
+        <form-login login-page="/login" authentication-failure-url="/login-error" />
+        <logout logout-success-url="/"/>
+    </http>
+
+    <user-service>
+        <user name="user" password="111" authorities="ROLE_USER"/>
+        <user name="admin" password="222" authorities="ROLE_ADMIN"/>
+    </user-service>
+
+</b:beans>

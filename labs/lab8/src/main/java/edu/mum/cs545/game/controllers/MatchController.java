@@ -3,11 +3,15 @@ package edu.mum.cs545.game.controllers;
 import edu.mum.cs545.game.domain.Match;
 import edu.mum.cs545.game.services.IMatchService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.security.Principal;
 
 @Controller
 public class MatchController {
@@ -28,7 +32,17 @@ public class MatchController {
     }
 
     @RequestMapping("match/new")
-    public String newMatch(Model model){
+    public String newMatch(Model model, Principal principal){
+
+        principal.getName();
+
+        // get user  info
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if(user!=null) {
+            String name = user.getUsername();
+        }
+
+
         //TODO: create view model for Friendly & Tournament match
         //model.addAttribute("match", new Match());
         return "match/edit";

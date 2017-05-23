@@ -1,16 +1,42 @@
 package edu.mum.cs545.game.configuration;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
+@EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication()
+                .withUser("user").password("111").roles("ROLE_USER").and()
+                .withUser("admin").password("222").roles("ROLE_ADMIN");
+    }
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.authorizeRequests().antMatchers("/").permitAll().and()
-                .authorizeRequests().antMatchers("/console/**").permitAll();
+
+        httpSecurity
+                .authorizeRequests()
+                    .antMatchers("/").permitAll()
+                    .antMatchers("/team/**").hasAnyRole("ROLE_USER", "ROLE_ADMIN")
+                    .antMatchers("/match/**").hasRole("ROLE_ADMIN")
+                    //.anyRequest().authenticated()
+                    .and()
+                .formLogin()
+                    .loginPage("/login")
+                    .failureUrl("/login-error")
+                    .permitAll()
+                    .and()
+                .logout()
+                    .logoutSuccessUrl("/")
+                    .permitAll()
+                ;
 
         httpSecurity.csrf().disable();
         httpSecurity.headers().frameOptions().disable();
