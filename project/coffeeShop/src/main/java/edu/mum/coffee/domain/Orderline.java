@@ -13,7 +13,7 @@ public class Orderline {
 
 	@Id
 	@GeneratedValue
-	private int id;
+	private Long id;
 	private int quantity;
 	@OneToOne
 	private Product product;
@@ -50,6 +50,10 @@ public class Orderline {
 
 	public double getPrice() {
 		return product.getPrice();
+	}
+
+	public Long getId() {
+		return id;
 	}
 
 }

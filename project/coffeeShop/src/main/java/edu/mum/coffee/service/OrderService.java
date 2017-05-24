@@ -15,6 +15,7 @@ import edu.mum.coffee.repository.OrderRepository;
 @Service
 @Transactional
 public class OrderService {
+
 	@Autowired
 	private OrderRepository orderRepository;
 	
@@ -38,7 +39,7 @@ public class OrderService {
 		return orderRepository.findOrderByOrderDateBetween(minDate, maxDate);
 	}
 
-	public Order findById(int id){
+	public Order findById(Long id){
 		return orderRepository.findOne(id);
 	}
 

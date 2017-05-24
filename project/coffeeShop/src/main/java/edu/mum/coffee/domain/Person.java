@@ -11,9 +11,10 @@ import javax.persistence.OneToOne;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Person {
+
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -22,7 +23,7 @@ public class Person {
 	private String phone;
 	private boolean enable;
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 

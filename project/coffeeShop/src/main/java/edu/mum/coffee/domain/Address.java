@@ -9,11 +9,15 @@ public class Address {
 
 	@Id
 	@GeneratedValue
-	private int id;
+	private Long id;
 	private String city;
 	private String state;
 	private String country;
 	private String zipcode;
+
+	public Long getId() {
+		return id;
+	}
 
 	public String getCity() {
 		return city;
@@ -46,5 +50,4 @@ public class Address {
 	public void setZipcode(String zipcode) {
 		this.zipcode = zipcode;
 	}
-
 }

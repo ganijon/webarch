@@ -9,7 +9,7 @@ import edu.mum.coffee.domain.Order;
 import edu.mum.coffee.domain.Person;
 import edu.mum.coffee.domain.Product;
 
-public interface OrderRepository extends JpaRepository<Order, Integer>{
+public interface OrderRepository extends JpaRepository<Order, Long>{
 	
 	List<Order> findDistinctOrderByOrderLines_Product(Product product);
 	List<Order> findOrderByPerson(Person person);
