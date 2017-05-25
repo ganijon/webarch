@@ -21,18 +21,18 @@ public class Person {
 	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
 	private String phone;
-	private boolean enable;
+	private boolean enabled;
 
 	public Long getId() {
 		return id;
 	}
 
-	public boolean isEnable() {
-		return enable;
+	public boolean getEnabled() {
+		return enabled;
 	}
 
-	public void setEnable(boolean enable) {
-		this.enable = enable;
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
 	}
 
 	public String getFirstName() {

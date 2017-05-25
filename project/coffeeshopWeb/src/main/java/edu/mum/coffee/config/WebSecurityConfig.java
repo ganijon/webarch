@@ -23,20 +23,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         httpSecurity
                 .authorizeRequests()
-                    .antMatchers("/").permitAll()
-                    .antMatchers("/team/**").hasAnyRole("USER", "ADMIN")
-                    .antMatchers("/match/**").hasRole("ADMIN")
-                    //.anyRequest().authenticated()
-                    .and()
+                .antMatchers("/").permitAll()
+                .antMatchers("/team/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers("/match/**").hasRole("ADMIN")
+                //.anyRequest().authenticated()
+                .and()
                 .formLogin()
-                    .loginPage("/login")
-                    .failureUrl("/login-error")
-                    .permitAll()
-                    .and()
+                .loginPage("/login")
+                .failureUrl("/login-error")
+                .permitAll()
+                .and()
                 .logout()
-                    .logoutSuccessUrl("/")
-                    .permitAll()
-                ;
+                .logoutSuccessUrl("/")
+                .permitAll()
+        ;
 
         httpSecurity.csrf().disable();
         httpSecurity.headers().frameOptions().disable();

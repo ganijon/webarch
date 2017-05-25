@@ -1,6 +1,6 @@
 package edu.mum.coffee.service;
 
-import edu.mum.coffee.domain.Product;
+import edu.mum.coffee.domain.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
@@ -13,46 +13,46 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
 @Service
-public class ProductApiService implements ProductService {
+public class PersonApiService implements PersonService {
 
     @Autowired
     RestTemplate restTemplate;
 
     private String apiEndpointUri;
 
-    public ProductApiService(@Value("${api.uri}") String apiUri) {
-        this.apiEndpointUri = apiUri + "/product/";
+    public PersonApiService(@Value("${api.uri}") String apiUri) {
+        this.apiEndpointUri = apiUri + "/person/";
     }
 
-
     @Override
-    public Product create(Product product) {
-        HttpEntity<?> httpEntity = new HttpEntity<Object>(product);
-        ResponseEntity<Product> response = restTemplate.postForEntity(
+    public Person create(Person person) {
+        HttpEntity<?> httpEntity = new HttpEntity<Object>(person);
+        ResponseEntity<Person> response = restTemplate.postForEntity(
                 apiEndpointUri,
                 httpEntity,
-                Product.class);
+                Person.class);
         return response.getBody();
     }
 
     @Override
-    public Product retrieve(Long id) {
-        ResponseEntity<Product> response = restTemplate.exchange(
+    public Person retrieve(Long id) {
+        ResponseEntity<Person> response = restTemplate.exchange(
                 apiEndpointUri + id,
                 HttpMethod.GET,
                 null,
-                Product.class);
+                Person.class);
         return response.getBody();
     }
 
     @Override
-    public void update(Product product) {
-        HttpEntity<?> httpEntity = new HttpEntity<Object>(product);
+    public void update(Person person) {
+        HttpEntity<?> httpEntity = new HttpEntity<Object>(person);
         restTemplate.put(apiEndpointUri, httpEntity);
     }
 
     @Override
     public void delete(Long id) {
+
         try {
             ResponseEntity<Void> response = restTemplate.exchange(
                     apiEndpointUri + id,
@@ -65,12 +65,12 @@ public class ProductApiService implements ProductService {
     }
 
     @Override
-    public List<Product> retrieveAll() {
-        ResponseEntity<List<Product>> response = restTemplate.exchange(
+    public List<Person> retrieveAll() {
+        ResponseEntity<List<Person>> response = restTemplate.exchange(
                 apiEndpointUri,
                 HttpMethod.GET,
                 null,
-                new ParameterizedTypeReference<List<Product>>() {
+                new ParameterizedTypeReference<List<Person>>() {
                 });
         return response.getBody();
     }

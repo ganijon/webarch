@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Boot Web App</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(persons)}">
+        <h2>Person List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Enabled</th>
+
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr th:each="person : ${persons}">
+                <td th:text="${person.id}"><a href="/person/${person.id}">Id</a></td>
+                <td th:text="${person.firstName}">First Name</td>
+                <td th:text="${person.lastName}">Last Name</td>
+                <td th:text="${person.email}">Email</td>
+                <td th:text="${person.address}">Address</td>
+                <td th:text="${person.phone}">Phone</td>
+                <td th:text="${person.enabled}">Enabled</td>
+
+                <td><a th:href="${ '/person/' + person.id}">View</a></td>
+                <td><a th:href="${'/person/edit/' + person.id}">Edit</a></td>
+                <td><a th:href="${'/person/delete/' + person.id}">Delete</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <a href="#" th:href="@{/person/add}">Add Person</a>
+    </div>
+</div>
+
+</body>
+</html>

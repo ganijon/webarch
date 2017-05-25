@@ -38,7 +38,7 @@ public class PersonServiceTest {
 		for (int i = 0; i < TEST_NumberOfPersons; i++) {
 			Person person = new Person();
 			person.setEmail(i + "test@email.com");
-			person.setEnable((i % 2 == 0));
+			person.setEnabled((i % 2 == 0));
 			person.setFirstName("firstName Test" + i);
 			person.setLastName("lastName Test" + i);
 			person.setPhone("111888777" + i);
@@ -52,7 +52,7 @@ public class PersonServiceTest {
 
 		// Store test objects in database -- Skipping 0 for Create Test
 		for (int i = 1; i < TEST_NumberOfPersons; i++) {
-			testPerson[i] = personService.savePerson(testPerson[i]);
+			testPerson[i] = personService.save(testPerson[i]);
 		}
 	}
 
@@ -63,8 +63,8 @@ public class PersonServiceTest {
 
 	@Test
 	public void testSavePerson() {
-		Person stored = personService.savePerson(testPerson[0]);
-		Person saved = personService.findById(stored.getId());
+		Person stored = personService.save(testPerson[0]);
+		Person saved = personService.retrieve(stored.getId());
 		if (!comparePerson(testPerson[0], saved)) {
 			fail("Not storing or retrieving Person");
 		}
@@ -87,13 +87,13 @@ public class PersonServiceTest {
 	public void testFindById() {
 		long something_else = testPerson[2].getId() + 100;
 
-		Person saved = personService.findById(something_else);
+		Person saved = personService.retrieve(something_else);
 
 		if (comparePerson(testPerson[1], saved)) {
 			fail("Not expected to match Person");
 		}
 
-		saved = personService.findById(testPerson[2].getId());
+		saved = personService.retrieve(testPerson[2].getId());
 
 		if (!comparePerson(testPerson[2], saved)) {
 			fail("Retrieved Person values are different");
@@ -103,8 +103,8 @@ public class PersonServiceTest {
 	private void deleteTestObjects() {
 		for (int i = 0; i < TEST_NumberOfPersons; i++) {
 			try {
-				Person person = personService.findById(testPerson[i].getId());
-				personService.removePerson(person);
+				Person person = personService.retrieve(testPerson[i].getId());
+				personService.delete(person);
 			} catch (Exception e) {
 				// Do not log exceptions
 			}

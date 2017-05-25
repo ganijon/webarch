@@ -3,6 +3,7 @@ package edu.mum.coffee.domain;
 public class Address {
 
 	private Long id;
+	private String street;
 	private String city;
 	private String state;
 	private String country;
@@ -10,6 +11,18 @@ public class Address {
 
 	public Long getId() {
 		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
 	}
 
 	public String getCity() {
@@ -43,4 +56,9 @@ public class Address {
 	public void setZipcode(String zipcode) {
 		this.zipcode = zipcode;
 	}
+
+	@Override
+    public String toString(){
+	    return street + ", " + city + " " + state + " " + zipcode + ", " + country;
+    }
 }

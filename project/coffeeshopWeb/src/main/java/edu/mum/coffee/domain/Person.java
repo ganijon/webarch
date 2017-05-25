@@ -8,18 +8,22 @@ public class Person {
 	private String email;
 	private Address address;
 	private String phone;
-	private boolean enable;
+	private boolean enabled;
 
 	public Long getId() {
 		return id;
 	}
 
-	public boolean isEnable() {
-		return enable;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
-	public void setEnable(boolean enable) {
-		this.enable = enable;
+	public boolean getEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enable) {
+		this.enabled = enable;
 	}
 
 	public String getFirstName() {
@@ -61,5 +65,4 @@ public class Person {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
 }

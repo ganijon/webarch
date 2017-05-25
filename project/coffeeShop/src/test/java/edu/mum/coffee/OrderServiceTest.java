@@ -172,7 +172,7 @@ public class OrderServiceTest {
 		for (int i = 0; i < TEST_NumberOfPersons; i++) {
 			Person person = new Person();
 			person.setEmail(i + "test@email.com");
-			person.setEnable((i % 2 == 0));
+			person.setEnabled((i % 2 == 0));
 			person.setFirstName("firstName Test" + i);
 			person.setLastName("lastName Test" + i);
 			person.setPhone("111888777" + i);
@@ -186,7 +186,7 @@ public class OrderServiceTest {
 
 		// Store test objects in database
 		for (int i = 0; i < TEST_NumberOfPersons; i++) {
-			testPerson[i] = personService.savePerson(testPerson[i]);
+			testPerson[i] = personService.save(testPerson[i]);
 		}
 	}
 
@@ -239,8 +239,8 @@ public class OrderServiceTest {
 		}
 		for (int i = 0; i < TEST_NumberOfPersons; i++) {
 			try {
-				Person person = personService.findById(testPerson[i].getId());
-				personService.removePerson(person);
+				Person person = personService.retrieve(testPerson[i].getId());
+				personService.delete(person);
 			} catch (Exception e) {
 				// Do not log exceptions
 			}

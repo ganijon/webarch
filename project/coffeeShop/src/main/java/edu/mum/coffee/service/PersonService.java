@@ -15,21 +15,19 @@ public class PersonService {
 
 	@Autowired
 	private PersonRepository personRepository;
-
-	public Person savePerson(Person person) {
+	public Person save(Person person) {
 		return personRepository.save(person);
 	}
-
+	public Person retrieve(Long id) {
+		return personRepository.findOne(id);
+	}
+	public void delete(Person person) {
+		personRepository.delete(person);
+	}
+	public List<Person> retrieveAll() {
+		return personRepository.findAll();
+	}
 	public List<Person> findByEmail(String email) {
 		return personRepository.findByEmail(email);
 	}
-
-	public Person findById(Long id) {
-		return personRepository.findOne(id);
-	}
-
-	public void removePerson(Person person) {
-		personRepository.delete(person);
-	}
-
 }
