@@ -24,7 +24,7 @@ public class ProductController {
 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Product>> retrieveAll() {
-        List<Product> products = productService.getAllProduct();
+        List<Product> products = productService.findAll();
         if (products.isEmpty()) {
             return new ResponseEntity<List<Product>>(HttpStatus.NO_CONTENT);
         }
@@ -33,7 +33,7 @@ public class ProductController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<Product> retrieve(@PathVariable Long id) {
-        Product existingProduct = productService.getProduct(id);
+        Product existingProduct = productService.findById(id);
 
         if (existingProduct == null) {
             return new ResponseEntity<Product>(HttpStatus.NOT_FOUND);
@@ -43,7 +43,7 @@ public class ProductController {
 
     @RequestMapping(method = RequestMethod.PUT)
     public ResponseEntity<Void> update(@RequestBody Product product) {
-        Product existingProduct = productService.getProduct(product.getId());
+        Product existingProduct = productService.findById(product.getId());
 
         if (existingProduct == null) {
             return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
@@ -55,7 +55,7 @@ public class ProductController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Void> delete(@PathVariable("id") Long id) {
-        Product existingProduct = productService.getProduct(id);
+        Product existingProduct = productService.findById(id);
         if (existingProduct == null) {
             return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
         } else {

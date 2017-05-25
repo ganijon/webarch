@@ -67,7 +67,7 @@ public class ProductServiceTest {
 	@Test
 	public void testSave() {
 		Product stored = productService.save(testProduct[0]);
-		Product saved = productService.getProduct(stored.getId());
+		Product saved = productService.findById(stored.getId());
 		if (!compareProduct(testProduct[0], saved)) {
 			fail("Not storing or retrieving Person");
 		}
@@ -75,7 +75,7 @@ public class ProductServiceTest {
 
 	@Test
 	public void testGetProduct() {
-		Product saved = productService.getProduct((testProduct[1].getId()));
+		Product saved = productService.findById((testProduct[1].getId()));
 		if (!compareProduct(testProduct[1], saved)) {
 			fail("Not storing or retrieving Product");
 		}
@@ -83,7 +83,7 @@ public class ProductServiceTest {
 
 	@Test
 	public void testGetAllProduct() {
-		List<Product> saved = productService.getAllProduct();
+		List<Product> saved = productService.findAll();
 		if (saved.size() < TEST_NumberOfProducts - 1) {
 			fail("Not storing or retrieving Products");
 		}

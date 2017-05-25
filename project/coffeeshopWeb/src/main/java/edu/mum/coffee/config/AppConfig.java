@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 public class AppConfig {
 
     @Bean
-    public RestTemplate apiRestTemplate(RestTemplateBuilder builder,
+    public RestTemplate restTemplate(RestTemplateBuilder builder,
                                         @Value("${api.uri}") String apiUri,
                                         @Value("${api.secret}") String apiSecret,
                                         @Value("${api.userName}") String apiUserName) {

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Boot Web App</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(orders)}">
+        <h2>Order List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Order Id</th>
+                <th>Order Date</th>
+                <th>Person Name</th>
+                <th>Total Amount</th>
+
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr th:each="order : ${orders}">
+                <td th:text="${order.id}"><a href="/order/${order.id}">Id</a></td>
+                <td th:text="${order.orderDate}">Order Date</td>
+                <td th:text="${order.person.fullName}">Person Name</td>
+                <td th:text="${order.totalAmount}">Total Amount</td>
+
+                <td><a th:href="${ '/order/' + order.id}">View</a></td>
+                <td><a th:href="${'/order/edit/' + order.id}">Edit</a></td>
+                <td><a th:href="${'/order/delete/' + order.id}">Delete</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <a href="#" th:href="@{/order/add}">Add Order</a>
+    </div>
+</div>
+
+</body>
+</html>

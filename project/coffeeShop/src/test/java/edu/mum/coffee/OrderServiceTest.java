@@ -239,7 +239,7 @@ public class OrderServiceTest {
 		}
 		for (int i = 0; i < TEST_NumberOfPersons; i++) {
 			try {
-				Person person = personService.retrieve(testPerson[i].getId());
+				Person person = personService.findById(testPerson[i].getId());
 				personService.delete(person);
 			} catch (Exception e) {
 				// Do not log exceptions

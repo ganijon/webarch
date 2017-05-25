@@ -18,13 +18,13 @@ public class PersonService {
 	public Person save(Person person) {
 		return personRepository.save(person);
 	}
-	public Person retrieve(Long id) {
+	public Person findById(Long id) {
 		return personRepository.findOne(id);
 	}
 	public void delete(Person person) {
 		personRepository.delete(person);
 	}
-	public List<Person> retrieveAll() {
+	public List<Person> findAll() {
 		return personRepository.findAll();
 	}
 	public List<Person> findByEmail(String email) {

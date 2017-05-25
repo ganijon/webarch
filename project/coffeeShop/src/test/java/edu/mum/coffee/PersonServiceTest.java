@@ -64,7 +64,7 @@ public class PersonServiceTest {
 	@Test
 	public void testSavePerson() {
 		Person stored = personService.save(testPerson[0]);
-		Person saved = personService.retrieve(stored.getId());
+		Person saved = personService.findById(stored.getId());
 		if (!comparePerson(testPerson[0], saved)) {
 			fail("Not storing or retrieving Person");
 		}
@@ -87,13 +87,13 @@ public class PersonServiceTest {
 	public void testFindById() {
 		long something_else = testPerson[2].getId() + 100;
 
-		Person saved = personService.retrieve(something_else);
+		Person saved = personService.findById(something_else);
 
 		if (comparePerson(testPerson[1], saved)) {
 			fail("Not expected to match Person");
 		}
 
-		saved = personService.retrieve(testPerson[2].getId());
+		saved = personService.findById(testPerson[2].getId());
 
 		if (!comparePerson(testPerson[2], saved)) {
 			fail("Retrieved Person values are different");
@@ -103,7 +103,7 @@ public class PersonServiceTest {
 	private void deleteTestObjects() {
 		for (int i = 0; i < TEST_NumberOfPersons; i++) {
 			try {
-				Person person = personService.retrieve(testPerson[i].getId());
+				Person person = personService.findById(testPerson[i].getId());
 				personService.delete(person);
 			} catch (Exception e) {
 				// Do not log exceptions

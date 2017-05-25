@@ -25,11 +25,11 @@ public class ProductService   {
 		productRepository.delete(product);
 	}
 
-	public Product getProduct(Long productId) {
+	public Product findById(Long productId) {
 		return  productRepository.findOne(productId);
 	}
 
-	public List<Product> getAllProduct() {
+	public List<Product> findAll() {
 		return  productRepository.findAll() ;
 	}
 	

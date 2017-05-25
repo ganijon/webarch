@@ -24,7 +24,7 @@ public class PersonController {
 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Person>> retrieveAll() {
-        List<Person> persons = personService.retrieveAll();
+        List<Person> persons = personService.findAll();
         if (persons.isEmpty()) {
             return new ResponseEntity<List<Person>>(HttpStatus.NO_CONTENT);
         }
@@ -33,7 +33,7 @@ public class PersonController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<Person> retrieve(@PathVariable Long id) {
-        Person existingPerson = personService.retrieve(id);
+        Person existingPerson = personService.findById(id);
 
         if (existingPerson == null) {
             return new ResponseEntity<Person>(HttpStatus.NOT_FOUND);
@@ -43,7 +43,7 @@ public class PersonController {
 
     @RequestMapping(method = RequestMethod.PUT)
     public ResponseEntity<Void> update(@RequestBody Person person) {
-        Person existingPerson = personService.retrieve(person.getId());
+        Person existingPerson = personService.findById(person.getId());
 
         if (existingPerson == null) {
             return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
@@ -55,7 +55,7 @@ public class PersonController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Void> delete(@PathVariable("id") Long id) {
-        Person existingPerson = personService.retrieve(id);
+        Person existingPerson = personService.findById(id);
         if (existingPerson == null) {
             return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
         } else {
