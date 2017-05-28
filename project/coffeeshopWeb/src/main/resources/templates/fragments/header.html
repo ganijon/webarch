@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head lang="en">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
@@ -21,21 +22,34 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#" th:href="@{/}">Home</a>
                     <ul class="nav navbar-nav">
+
                         <li><a href="#" th:href="@{/product/}">Products</a></li>
-                        <li><a href="#" th:href="@{/person/}">Persons</a></li>
-                        <li><a href="#" th:href="@{/order/}">Orders</a></li>
+
+                        <li sec:authorize="hasRole('ROLE_ADMIN')">
+                            <a href="#" th:href="@{/person/}">Persons</a>
+                        </li>
+
+                        <li sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_USER')">
+                            <a href="#" th:href="@{/order/}">Orders</a>
+                        </li>
+
+                        <li sec:authorize="hasRole('ROLE_USER')">
+                            <a href="#" th:href="@{/person/editprofile/}">Profile</a>
+                        </li>
+
+                        <li sec:authorize="isAuthenticated()">
+                            <a href="#" th:href="@{/logout}">Sign Out</a>
+                        </li>
+
+                        <li th:if="${null == #httpServletRequest.remoteUser}">
+                            <a href="#" th:href="@{/login}">Sign In</a>
+                        </li>
+
                     </ul>
 
                 </div>
             </div>
         </nav>
-
-        <!--<div class="jumbotron">-->
-            <!--<div class="row text-center">-->
-                <!--<img src="../../static/images/banner_coffee.jpg"-->
-                     <!--th:src="@{/images/banner_coffee.jpg}"/>-->
-            <!--</div>-->
-        <!--</div>-->
     </div>
 </div>
 </body>

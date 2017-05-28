@@ -11,16 +11,13 @@ public class IndexController {
         return "index";
     }
 
-    // Login form
     @RequestMapping("/login")
     public String login() {
         return "login";
     }
 
-    // Login erro
-    @RequestMapping("/login-error")
+    @RequestMapping("/403")
     public String loginError(Model model) {
-        model.addAttribute("loginError", "You are not authorized to access this resources");
-        return "login";
+        return "403";
     }
 }

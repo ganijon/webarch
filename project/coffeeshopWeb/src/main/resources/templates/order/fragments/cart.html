@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+</head>
+<body>
+<div th:fragment="cart">
+
+    <div th:unless="${session.cart == null}">
+        <h2>Recent Order</h2>
+        <div>
+            <form class="form-horizontal">
+
+                <div class="form-group">
+
+                    <div th:if="${not #lists.isEmpty(session.cart.orderLines)}">
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                            </tr>
+                            <tr th:each="orderLine : ${session.cart.orderLines}">
+                                <td th:text="${orderLine.product.productName}">Product Name</td>
+                                <td th:text="${orderLine.product.price}">Price</td>
+                                <td th:text="${orderLine.quantity}">Quantity</td>
+                                <td th:text="${orderLine.subtotal}">Subtotal</td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <label class="col-sm-2 btn btn-default">
+                        <a href="#" th:href="@{/order/checkout}">Checkout</a></label>
+                    <label class="col-sm-3 control-label">
+                        <a href="#" th:href="@{/order/checkout}">Total Amount:</a></label>
+                    <div class="col-sm-5">
+                        <p class="form-control-static" th:text="${session.cart.totalAmount}"/></div>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

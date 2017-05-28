@@ -9,17 +9,8 @@
 <body>
 
 <div class="container">
+
     <th:block th:include="fragments/header :: header"></th:block>
-
-    <div th:if="${null != #httpServletRequest.remoteUser}">
-        <h1 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]!</h1>
-
-        <form class="form-horizontal" th:action="@{/logout}" method="post">
-            <div class="row">
-                <button type="submit" class="btn btn-default">Sign Out</button>
-            </div>
-        </form>
-    </div>
 
     <div>
         <div class="row text-center">
@@ -27,6 +18,10 @@
                  th:src="@{/images/coffee-banner.jpg}"/>
         </div>
     </div>
+
+    <th:block th:include="fragments/footer :: footer"></th:block>
+
 </div>
+
 </body>
 </html>

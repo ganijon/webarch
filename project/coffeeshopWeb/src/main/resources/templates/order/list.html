@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head lang="en">
 
     <title>Spring Boot Web App</title>
@@ -10,35 +11,52 @@
 <body>
 <div class="container">
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <!--/*/ <th:block th:include="order/fragments/cart :: cart"></th:block> /*/-->
+
+    <h3>Order History</h3>
+
+    <div th:if="${#lists.isEmpty(orders)}">
+        <label class="col-sm-2 control-label">No orders</label>
+        <a class="col-sm-3 btn btn-default" th:href="@{/product/}">Start browsing Products</a>
+
+    </div>
+
     <div th:if="${not #lists.isEmpty(orders)}">
-        <h2>Order List</h2>
+
+
+        <div th:if="${message}" class="col-sm-4">
+            <p class="form-control-static">
+            <p th:text="${message}" style="color:red">Flash Attribute</p>
+            </p>
+        </div>
+
         <table class="table table-striped">
             <tr>
                 <th>Order Id</th>
                 <th>Order Date</th>
-                <th>Person Name</th>
+                <th sec:authorize="hasRole('ROLE_ADMIN')">Person Name</th>
                 <th>Total Amount</th>
 
-                <th>View</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th sec:authorize="hasRole('ROLE_USER')">View</th>
+                <th sec:authorize="hasRole('ROLE_USER')">Delete</th>
+
             </tr>
             <tr th:each="order : ${orders}">
                 <td th:text="${order.id}"><a href="/order/${order.id}">Id</a></td>
                 <td th:text="${order.orderDate}">Order Date</td>
-                <td th:text="${order.person.fullName}">Person Name</td>
+                <td sec:authorize="hasRole('ROLE_ADMIN')"
+                    th:text="${order.person.fullName}">Person Name
+                </td>
                 <td th:text="${order.totalAmount}">Total Amount</td>
 
-                <td><a th:href="${ '/order/' + order.id}">View</a></td>
-                <td><a th:href="${'/order/edit/' + order.id}">Edit</a></td>
-                <td><a th:href="${'/order/delete/' + order.id}">Delete</a></td>
+                <td sec:authorize="hasRole('ROLE_USER')"><a th:href="${ '/order/' + order.id}">Details</a></td>
+                <td sec:authorize="hasRole('ROLE_USER')"><a th:href="${'/order/delete/' + order.id}">Delete</a></td>
             </tr>
         </table>
     </div>
 
-    <div>
-        <a href="#" th:href="@{/order/add}">Add Order</a>
-    </div>
+    <!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
 </div>
 
 </body>

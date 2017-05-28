@@ -7,15 +7,24 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+import javax.sql.DataSource;
+
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
+    private DataSource dataSource;
+
+    @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("user").password("111").roles("USER").and()
-                .withUser("admin").password("222").roles("ADMIN");
+        auth
+                .jdbcAuthentication().dataSource(dataSource)
+                .usersByUsernameQuery(
+                        "select email as username,password,enabled from person where email=?")
+                .authoritiesByUsernameQuery(
+                        "select p.email as username, a.authority from person p," +
+                                " authorities a where p.email=a.username and p.email=?");
     }
 
     @Override
@@ -23,23 +32,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         httpSecurity
                 .authorizeRequests()
-                .antMatchers("/").permitAll()
-                .antMatchers("/team/**").hasAnyRole("USER", "ADMIN")
-                .antMatchers("/match/**").hasRole("ADMIN")
-                //.anyRequest().authenticated()
+                .antMatchers("/css/**", "/images/**", "/webjars/**").permitAll()
+                .antMatchers("/", "/product/", "/login", "/person/add", "/person/create").permitAll()
+                .antMatchers( "/product/order/*","/orders/add/", "/orders/show/", "/person/edit/*", "/person/update/").hasRole("USER")
+                .antMatchers("/product/**", "/person/", "/person/show/", "/orders/").hasRole("ADMIN")
+                .anyRequest().authenticated()
                 .and()
-                .formLogin()
-                .loginPage("/login")
-                .failureUrl("/login-error")
-                .permitAll()
+                .formLogin().loginPage("/login")
                 .and()
-                .logout()
-                .logoutSuccessUrl("/")
-                .permitAll()
+                .logout().logoutSuccessUrl("/login?logout")
+                .and()
+                .exceptionHandling().accessDeniedPage("/403")
         ;
 
         httpSecurity.csrf().disable();
         httpSecurity.headers().frameOptions().disable();
     }
-
 }

@@ -1,6 +1,6 @@
 package edu.mum.coffee.service;
 
-import edu.mum.coffee.domain.Product;
+import edu.mum.coffee.model.Product;
 
 import java.util.List;
 

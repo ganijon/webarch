@@ -1,6 +1,7 @@
 package edu.mum.coffee.service;
 
-import edu.mum.coffee.domain.Order;
+import edu.mum.coffee.model.Order;
+import edu.mum.coffee.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
@@ -9,7 +10,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URLEncoder;
 import java.util.List;
 
 @Service
@@ -35,16 +38,6 @@ public class OrderApiService implements OrderService {
     }
 
     @Override
-    public Order retrieve(Long id) {
-        ResponseEntity<Order> response = restTemplate.exchange(
-                apiEndpointUri + id,
-                HttpMethod.GET,
-                null,
-                Order.class);
-        return response.getBody();
-    }
-
-    @Override
     public void update(Order order) {
         HttpEntity<?> httpEntity = new HttpEntity<Object>(order);
         restTemplate.put(apiEndpointUri, httpEntity);
@@ -64,14 +57,42 @@ public class OrderApiService implements OrderService {
         }
     }
 
+
     @Override
-    public List<Order> retrieveAll() {
+    public Order findById(Long id) {
+        ResponseEntity<Order> response = restTemplate.exchange(
+                apiEndpointUri + id,
+                HttpMethod.GET,
+                null,
+                Order.class);
+        return response.getBody();
+    }
+
+    @Override
+    public List<Order> findAll() {
         ResponseEntity<List<Order>> response = restTemplate.exchange(
                 apiEndpointUri,
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<List<Order>>() {
                 });
+        return response.getBody();
+    }
+
+    @Override
+    public List<Order> findByPersonEmail(String email) {
+        String requestUri = UriComponentsBuilder.fromHttpUrl(apiEndpointUri)
+                .path("find").queryParam("email", URLEncoder.encode(email))
+                .build().toUriString();
+
+        ResponseEntity<List<Order>> response = restTemplate.exchange(
+                requestUri,
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<List<Order>>() {
+                }
+        );
+
         return response.getBody();
     }
 }

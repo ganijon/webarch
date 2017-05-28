@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head lang="en">
 
     <title>Spring Boot Web App</title>
@@ -11,7 +12,7 @@
 <div class="container">
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
     <div th:if="${not #lists.isEmpty(products)}">
-        <h2>Product List</h2>
+        <h2>Products</h2>
         <table class="table table-striped">
             <tr>
                 <th>Id</th>
@@ -20,9 +21,10 @@
                 <th>Price</th>
                 <th>Product Type</th>
 
-                <th>View</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th sec:authorize="hasRole('ROLE_USER')">Order</th>
+                <th sec:authorize="hasRole('ROLE_ADMIN')">View</th>
+                <th sec:authorize="hasRole('ROLE_ADMIN')">Edit</th>
+                <th sec:authorize="hasRole('ROLE_ADMIN')">Delete</th>
             </tr>
             <tr th:each="product : ${products}">
                 <td th:text="${product.id}"><a href="/product/${product.id}">Id</a></td>
@@ -31,16 +33,24 @@
                 <td th:text="${product.price}">Price</td>
                 <td th:text="${product.productType}">Product Type</td>
 
-                <td><a th:href="${ '/product/' + product.id}">View</a></td>
-                <td><a th:href="${'/product/edit/' + product.id}">Edit</a></td>
-                <td><a th:href="${'/product/delete/' + product.id}">Delete</a></td>
+                <td sec:authorize="hasRole('ROLE_USER')">
+                    <a class="col-sm2 btn btn-default" th:href="${ '/product/order/' + product.id}">Add to Cart</a></td>
+                <td sec:authorize="hasRole('ROLE_ADMIN')">
+                    <a th:href="${ '/product/' + product.id}">View</a></td>
+                <td sec:authorize="hasRole('ROLE_ADMIN')">
+                    <a th:href="${'/product/edit/' + product.id}">Edit</a></td>
+                <td sec:authorize="hasRole('ROLE_ADMIN')">
+                    <a th:href="${'/product/delete/' + product.id}">Delete</a></td>
             </tr>
         </table>
     </div>
 
-    <div>
-        <a href="#" th:href="@{/product/add}">Add Product</a>
+    <div sec:authorize="hasRole('ROLE_ADMIN')">
+        <a href="#" th:href="@{/product/add}" class="col-sm2 btn btn-default">Add Product</a>
     </div>
+
+    <!--/*/ <th:block th:include="order/fragments/cart :: cart"></th:block> /*/-->
+    <!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
 </div>
 
 </body>

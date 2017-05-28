@@ -42,7 +42,7 @@
                 <div class="col-sm-10">
                     <select class="form-control" th:field="*{productType}">
                         <option value="" selected="selected">Select</option>
-                        <option th:each="productType : ${T(edu.mum.coffee.domain.ProductType).values()}"
+                        <option th:each="productType : ${T(edu.mum.coffee.model.ProductType).values()}"
                                 th:value="${productType}" th:text="${productType}">Product Type
                         </option>
                     </select>
@@ -54,6 +54,8 @@
             </div>
         </form>
     </div>
+
+    <!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
 </div>
 
 </body>

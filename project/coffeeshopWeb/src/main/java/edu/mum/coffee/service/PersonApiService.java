@@ -1,6 +1,6 @@
 package edu.mum.coffee.service;
 
-import edu.mum.coffee.domain.Person;
+import edu.mum.coffee.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
@@ -9,7 +9,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URLEncoder;
 import java.util.List;
 
 @Service
@@ -72,6 +74,21 @@ public class PersonApiService implements PersonService {
                 null,
                 new ParameterizedTypeReference<List<Person>>() {
                 });
+        return response.getBody();
+    }
+
+    @Override
+    public Person findByEmail(String email) {
+        String requestUri = UriComponentsBuilder.fromHttpUrl(apiEndpointUri)
+                .path("find").queryParam("email", URLEncoder.encode(email))
+                .build().toUriString();
+
+        ResponseEntity<Person> response = restTemplate.exchange(
+                requestUri,
+                HttpMethod.GET,
+                null,
+                Person.class
+        );
         return response.getBody();
     }
 }

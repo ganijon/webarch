@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head lang="en">
 
     <title>Spring Boot Web App</title>
@@ -11,40 +12,42 @@
 <div class="container">
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
     <div th:if="${not #lists.isEmpty(persons)}">
-        <h2>Person List</h2>
+        <h2>Persons</h2>
         <table class="table table-striped">
             <tr>
                 <th>Id</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Email</th>
                 <th>Address</th>
                 <th>Phone</th>
+                <th>Email</th>
                 <th>Enabled</th>
 
                 <th>View</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <!--<th>Edit</th>-->
+                <!--<th>Delete</th>-->
             </tr>
             <tr th:each="person : ${persons}">
                 <td th:text="${person.id}"><a href="/person/${person.id}">Id</a></td>
                 <td th:text="${person.firstName}">First Name</td>
                 <td th:text="${person.lastName}">Last Name</td>
-                <td th:text="${person.email}">Email</td>
                 <td th:text="${person.address}">Address</td>
                 <td th:text="${person.phone}">Phone</td>
+                <td th:text="${person.email}">Email</td>
                 <td th:text="${person.enabled}">Enabled</td>
 
-                <td><a th:href="${ '/person/' + person.id}">View</a></td>
-                <td><a th:href="${'/person/edit/' + person.id}">Edit</a></td>
-                <td><a th:href="${'/person/delete/' + person.id}">Delete</a></td>
+                <td><a th:href="${ '/person/' + person.id}">Details</a></td>
+                <!--<td><a th:href="${'/person/edit/' + person.id}">Edit</a></td>-->
+                <!--<td><a th:href="${'/person/delete/' + person.id}">Delete</a></td>-->
             </tr>
         </table>
     </div>
 
-    <div>
-        <a href="#" th:href="@{/person/add}">Add Person</a>
+    <div sec:authorize="hasRole('ROLE_ADMIN')">
+        <a class="col-sm2 btn btn-default" th:href="@{/person/add}" >Add Person</a>
     </div>
+
+    <!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
 </div>
 
 </body>
